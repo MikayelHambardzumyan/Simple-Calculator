@@ -1,0 +1,77 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.calculator{
+    margin: 5px;
+    height: inherit;
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: larger;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: rgb(77, 82, 86);
+}
+
+.simCalc{
+    padding: 10px;
+    margin: 0;
+    font-style: italic;
+    color: goldenrod;
+    font-family: initial;
+    font-size: xxx-large;
+    text-align: start;
+}
+.calculator > .calcScreen{
+    margin: 5px 15px;
+    padding: 5px;
+    height: 60px;
+    border: 1px solid black;
+    text-align: end;
+    font-size: xxx-large;
+    color: black;
+    background-color: rgba(62, 112, 31, 0.385);
+}
+
+.calculator > .keypad > button > span{
+    font-variant: diagonal-fractions;
+}
+
+.calculator > .keypad{
+    width: initial;
+    height: 100%;
+    margin: 15px;
+    display: grid;
+    grid-template-areas:"num7 num8 num9 divide clean"
+                        "num4 num5 num6 multiple percent"
+                        "num1 num2 num3 minus equal"
+                        "zero zero point plus equal";
+    grid-gap: 7px;
+}
+
+.calculator > .keypad > .equal {
+    grid-area: equal;
+}
+
+.calculator > .keypad > .num0 {
+    grid-area: zero;
+}
+
+.calculator > .keypad > .key{
+    text-align: center;
+    line-height: 80px;
+    font-size: 3rem;
+    cursor: pointer;
+    user-select: none;
+    background-color: gray;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+.calculator > .keypad > .clean{
+    background-color: brown;
+}
